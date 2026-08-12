@@ -80,3 +80,14 @@ Examples:
 
 \- Do not invent technical details that are not present in the project.
 
+
+## Project Workflow
+
+Before making changes:
+
+1. Inspect the existing project structure.
+2. Understand the relevant files and their purpose.
+3. Make the smallest appropriate change.
+4. Verify that the change works.
+5. Update documentation when necessary.
+6. Use Conventional Commits for Git commits.
