@@ -91,3 +91,16 @@ Before making changes:
 4. Verify that the change works.
 5. Update documentation when necessary.
 6. Use Conventional Commits for Git commits.
+
+
+## Project Rules
+
+- User-facing forms must use the project's existing validation pattern.
+
+- Every form field must have an accessible label and field-level validation feedback.
+
+- New forms must include automated tests for successful submission and validation failures.
+
+- AI-generated changes must pass the relevant tests before they are considered complete.
+
+- Existing UI components and styling conventions should be reused instead of creating duplicate components.

@@ -1,0 +1,59 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-field__required {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.form-field__hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.form-field__error {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--danger);
+  border-left: 3px solid var(--danger);
+  padding-left: 0.5rem;
+}
+
+.form-field__error-icon {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.form-field input[type='text'],
+.form-field input[type='email'],
+.form-field select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.55rem;
+  background: var(--input-bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.form-field input[aria-invalid='true'],
+.form-field select[aria-invalid='true'] {
+  border-color: var(--danger);
+  border-width: 2px;
+}
