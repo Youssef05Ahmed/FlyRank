@@ -1,0 +1,244 @@
+.account-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.account-settings-form__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.account-settings-form__header h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.account-settings-form__subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  max-width: 36rem;
+  line-height: 1.5;
+}
+
+.account-settings-form__status {
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent-bright);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.account-settings-form__section {
+  margin: 0;
+  padding: 1.25rem 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: 0 12px 40px color-mix(in srgb, #000 35%, transparent);
+}
+
+.account-settings-form__section legend {
+  padding: 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.account-settings-form__section-desc {
+  margin: 0.35rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.account-settings-form__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.account-settings-form__grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.account-settings-form__grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 720px) {
+  .account-settings-form__grid--2,
+  .account-settings-form__grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .account-settings-form__grid-span {
+    display: none;
+  }
+}
+
+.account-settings-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.account-settings-form__field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.account-settings-form__required {
+  margin-left: 0.15rem;
+  color: var(--accent-bright);
+}
+
+.account-settings-form__field input[type='text'],
+.account-settings-form__field input[type='email'],
+.account-settings-form__field input[type='url'],
+.account-settings-form__field input[type='password'],
+.account-settings-form__field textarea,
+.account-settings-form__field select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.55rem;
+  background: var(--input-bg);
+  color: var(--text);
+  font: inherit;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.account-settings-form__field textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.account-settings-form__field input:focus-visible,
+.account-settings-form__field textarea:focus-visible,
+.account-settings-form__field select:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.account-settings-form__field input[aria-invalid='true'],
+.account-settings-form__field textarea[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.account-settings-form__hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.account-settings-form__error {
+  font-size: 0.8rem;
+  color: var(--danger);
+}
+
+.account-settings-form__checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.account-settings-form__check {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.account-settings-form__check input {
+  margin-top: 0.2rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--accent);
+}
+
+.account-settings-form__check label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  cursor: pointer;
+}
+
+.account-settings-form__check-label {
+  font-weight: 600;
+  font-size: 0.925rem;
+}
+
+.account-settings-form__check-desc {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.account-settings-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+.account-settings-form__button {
+  border-radius: 0.55rem;
+  padding: 0.7rem 1.15rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.account-settings-form__button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.account-settings-form__button--ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.account-settings-form__button--ghost:hover {
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+}
+
+.account-settings-form__button--primary {
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    var(--accent-deep) 100%
+  );
+  color: #0b0f18;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.account-settings-form__button--primary:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.account-settings-form__button--primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
